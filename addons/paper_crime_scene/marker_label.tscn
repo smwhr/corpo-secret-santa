@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://5gxdba6wnoj5"]
+
+[ext_resource type="Theme" uid="uid://ddhdr21bj6t7" path="res://ui/ui_theme.tres" id="1_su5n2"]
+[ext_resource type="Script" uid="uid://bvkn62bqcdqon" path="res://addons/paper_crime_scene/marker_label.gd" id="2_v015k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rgut"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h0d6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 121.09599
+offset_bottom = 82.248
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_su5n2")
+script = ExtResource("2_v015k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.6486812
+anchor_top = -0.83892614
+anchor_right = -1.6486812
+anchor_bottom = -0.83892614
+offset_right = 188.0
+offset_bottom = 78.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_su5n2")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rgut")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8rgut")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8rgut")
+text = "TagLabel"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -34.0
+offset_right = 40.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_8h0d6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8h0d6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8h0d6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8h0d6")
+text = "E"
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3igwh347jpet"]
+
+[ext_resource type="PackedScene" uid="uid://ca4e74fc6iqxy" path="res://sets/desk.glb" id="1_ps3vx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ps3vx"]
+size = Vector3(1.439209, 0.7608032, 0.70751953)
+
+[node name="Desk" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="desk" parent="." instance=ExtResource("1_ps3vx")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6422119, 0.3609314, -0.35375977)
+shape = SubResource("BoxShape3D_ps3vx")

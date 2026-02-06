@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://beyay6hg5qymv"]
+
+[ext_resource type="Script" uid="uid://dn83vlp3by8s4" path="res://ui/bubble.gd" id="1_tfy6y"]
+[ext_resource type="Theme" uid="uid://ddhdr21bj6t7" path="res://ui/ui_theme.tres" id="2_hlb47"]
+[ext_resource type="FontFile" uid="uid://cblcrto4778h7" path="res://ui/Nunito-VariableFont_wght.ttf" id="3_mk5mk"]
+
+[sub_resource type="FontVariation" id="FontVariation_jnqbm"]
+base_font = ExtResource("3_mk5mk")
+variation_opentype = {
+2003265652: 900
+}
+
+[node name="Bubble" type="Control"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+script = ExtResource("1_tfy6y")
+
+[node name="Wrapper" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Wrapper"]
+layout_mode = 2
+color = Color(0.93333334, 0.93333334, 0.93333334, 1)
+
+[node name="InnerWrapper" type="VBoxContainer" parent="Wrapper"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CharacterName" type="Label" parent="Wrapper/InnerWrapper"]
+layout_mode = 2
+theme = ExtResource("2_hlb47")
+theme_override_fonts/font = SubResource("FontVariation_jnqbm")
+theme_override_font_sizes/font_size = 19
+text = "NOM DU PERSONNAGE"
+
+[node name="Text" type="Label" parent="Wrapper/InnerWrapper"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_hlb47")
+text = "Ceci est un texte un peu long qui permet de voir comment ça se comporte quand le texte est vraiment très long."
+autowrap_mode = 3
+
+[node name="RightArrow" type="Control" parent="Wrapper"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="RightArrowShape" type="Polygon2D" parent="Wrapper/RightArrow"]
+position = Vector2(0, -48)
+color = Color(0.933333, 0.933333, 0.933333, 1)
+polygon = PackedVector2Array(0, 1, 43.5, 71, 0, 48)
+uv = PackedVector2Array(-1, 1, -44, 73, 0, 47)
+
+[node name="LeftArrow" type="Control" parent="Wrapper"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="LeftArrowShape" type="Polygon2D" parent="Wrapper/LeftArrow"]
+position = Vector2(1, -48)
+color = Color(0.933333, 0.933333, 0.933333, 1)
+polygon = PackedVector2Array(-1, 1, -44, 73, -1, 48)
+uv = PackedVector2Array(-1, 1, -44, 73, -1, 48)

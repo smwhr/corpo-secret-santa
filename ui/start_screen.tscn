@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://wbfyoicen7sc"]
+
+[ext_resource type="Theme" uid="uid://ddhdr21bj6t7" path="res://ui/ui_theme.tres" id="1_50anp"]
+[ext_resource type="Script" uid="uid://b5gapg6simiqb" path="res://ui/start_screen.gd" id="1_s6cxg"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_50anp")
+script = ExtResource("1_s6cxg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2285108, 0.2285108, 0.2285108, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Investigate the Secret Santa"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"

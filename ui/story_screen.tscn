@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bidu54fa51p43"]
+
+[ext_resource type="Script" uid="uid://cfmub746xhju8" path="res://ui/story_screen.gd" id="1_71m2e"]
+[ext_resource type="Theme" uid="uid://ddhdr21bj6t7" path="res://ui/ui_theme.tres" id="2_cywne"]
+
+[node name="StoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71m2e")
+
+[node name="TextContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 266.0
+offset_top = -254.0
+offset_right = -266.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_cywne")

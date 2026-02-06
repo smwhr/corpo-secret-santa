@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgwg1pqlce6wu"]
+
+[ext_resource type="PackedScene" uid="uid://b15jfcviwvf1q" path="res://props/Props.glb" id="1_ul25p"]
+
+[node name="Props" instance=ExtResource("1_ul25p")]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://pxerkk0bn0wb"]
+
+[ext_resource type="Script" uid="uid://bcthjhkguwdlx" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://wbfyoicen7sc" path="res://ui/start_screen.tscn" id="2_e2o6t"]
+[ext_resource type="Resource" uid="uid://hvvad0tyvbn4" path="res://ink/story.ink.json" id="6_eow3j"]
+[ext_resource type="PackedScene" path="res://ui/dialog_screen.tscn" id="6_j5wjh"]
+[ext_resource type="Script" uid="uid://p0a38yv2j5yo" path="res://addons/inkgd/ink_player.gd" id="6_ryrav"]
+[ext_resource type="PackedScene" path="res://ui/story_screen.tscn" id="7_eow3j"]
+
+[node name="Game" type="Node3D"]
+physics_interpolation_mode = 1
+script = ExtResource("1_80nbo")
+
+[node name="InkPlayer" type="Node" parent="."]
+script = ExtResource("6_ryrav")
+ink_file = ExtResource("6_eow3j")
+loads_in_background = false
+metadata/_custom_type_script = "uid://p0a38yv2j5yo"
+
+[node name="DialogueScreen" parent="." instance=ExtResource("6_j5wjh")]
+mouse_filter = 1
+mouse_default_cursor_shape = 3
+
+[node name="StartScreen" parent="." instance=ExtResource("2_e2o6t")]
+
+[node name="StoryScreen" parent="." instance=ExtResource("7_eow3j")]
+visible = false
+mouse_filter = 2
+
+[node name="StoryStage" type="Node3D" parent="."]
+
+[connection signal="start_the_game" from="StartScreen" to="." method="on_start_the_game"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuxh84vqvivu8"]
+
+[ext_resource type="PackedScene" uid="uid://p5dgn1eivs74" path="res://sets/kitchenFridgeLarge.glb" id="1_s8aqu"]
+[ext_resource type="Script" uid="uid://cn24npdfcyo7a" path="res://addons/paper_crime_scene/prop_zone.gd" id="2_w67dr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8aqu"]
+size = Vector3(1.3034668, 2.3168335, 1.0178223)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sgn6c"]
+size = Vector3(0.8448839, 2.3411102, 1.5507245)
+
+[node name="Fridge" type="StaticBody3D"]
+
+[node name="kitchenFridgeLarge" parent="." instance=ExtResource("1_s8aqu")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.618042, 1.1002502, -0.34899902)
+shape = SubResource("BoxShape3D_s8aqu")
+
+[node name="PropZone" type="Area3D" parent="."]
+script = ExtResource("2_w67dr")
+metadata/tag = "fridge"
+
+[node name="Marker" type="Node3D" parent="PropZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8756447, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PropZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057799816, 1.117073, -0.07269144)
+shape = SubResource("BoxShape3D_sgn6c")

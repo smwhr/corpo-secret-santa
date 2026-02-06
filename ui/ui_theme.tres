@@ -1,0 +1,55 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ddhdr21bj6t7"]
+
+[ext_resource type="FontFile" uid="uid://caqys31jshnxx" path="res://ui/Nunito-VariableFont_wght.ttf" id="1_wksio"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wksio"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.933333, 0.933333, 0.933333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lupir"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3gja"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm6e3"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.933333, 0.933333, 0.933333, 1)
+expand_margin_right = 10.0
+
+[resource]
+default_font = ExtResource("1_wksio")
+default_font_size = 42
+Button/colors/font_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_focus_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_hover_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+Button/colors/font_hover_pressed_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_pressed_color = Color(0.2, 0.2, 0.2, 1)
+Button/fonts/font = ExtResource("1_wksio")
+Button/styles/focus = SubResource("StyleBoxFlat_wksio")
+Button/styles/hover = SubResource("StyleBoxFlat_lupir")
+Button/styles/normal = SubResource("StyleBoxFlat_e3gja")
+Label/colors/font_color = Color(0.2, 0.2, 0.2, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_xm6e3")
