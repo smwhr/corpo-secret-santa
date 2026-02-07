@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://h3dwqhibbtee"]
+[gd_scene format=4 uid="uid://h3dwqhibbtee"]
 
 [ext_resource type="Texture2D" uid="uid://dmfd3ux0vyott" path="res://props/Props_CorpoXMasProps.jpg" id="1_a5esl"]
 [ext_resource type="Script" uid="uid://cn24npdfcyo7a" path="res://addons/paper_crime_scene/prop_zone.gd" id="2_nik7d"]
@@ -46,20 +46,20 @@ shadow_mesh = SubResource("ArrayMesh_pd5k6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_jaq57"]
 size = Vector3(0.8448839, 0.39764404, 0.7658863)
 
-[node name="Tea" type="StaticBody3D"]
+[node name="Tea" type="StaticBody3D" unique_id=555024839]
 
-[node name="Tea" type="MeshInstance3D" parent="."]
+[node name="Tea" type="MeshInstance3D" parent="." unique_id=1333932753]
 transform = Transform3D(0.25, 0, 0, 0, 0, -0.25, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nik7d")
 skeleton = NodePath("")
 
-[node name="PropZone" type="Area3D" parent="."]
+[node name="PropZone" type="Area3D" parent="." unique_id=1687111534]
 script = ExtResource("2_nik7d")
 metadata/tag = "tea"
 
-[node name="Marker" type="Node3D" parent="PropZone"]
+[node name="Marker" type="Node3D" parent="PropZone" unique_id=190840507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39566422, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PropZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PropZone" unique_id=268801431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057799816, 0.018096924, 0.00020122528)
 shape = SubResource("BoxShape3D_jaq57")
